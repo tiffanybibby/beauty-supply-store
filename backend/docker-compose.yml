@@ -3,6 +3,7 @@ services:
   postgres:
     image: postgres:13
     restart: always
+    container_name: beauty_supply_postgres_db
     environment:
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=postgres

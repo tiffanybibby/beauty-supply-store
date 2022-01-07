@@ -1,10 +1,12 @@
 import { PrismaClient } from "@prisma/client";
 import express from "express";
+import cors from 'cors'
 const prisma = new PrismaClient();
 const app = express();
-const port = 5000;
+const port = 3001;
 
 app.use(express.json());
+app.use(cors())
 
 app.get("/", async (_req, res) => {
   res.send("If you're reading this you're home! - test");
@@ -134,5 +136,6 @@ app.use((req, res, next) => {
     message: `Unsucessful query for path: ${req.path}`,
   });
 });
+
 
 app.listen(port, () => console.log(`server is eavesdropping on port ${port}`));

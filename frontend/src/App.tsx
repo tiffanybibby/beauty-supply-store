@@ -1,11 +1,18 @@
-import React from 'react';
+import React, { Fragment } from "react";
+import { Route } from "react-router";
+import Products from "./components/Products";
 
-const App = () => {
 
+function App() {
+
+  
   return (
-    <div className="App">
-      <h1>Welcome to the Beauty Supply Store</h1>
-    </div>
+    <Fragment>
+          {/* <Route path="/"/>
+          <Route path="/products/"/>
+          <Route path="/product/:productId"/> */}
+      <Products />
+    </Fragment>
   );
 }
 
