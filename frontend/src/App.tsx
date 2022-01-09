@@ -1,17 +1,20 @@
 import React, { Fragment } from "react";
-import { Route } from "react-router";
-import Products from "./components/Products";
-
+import { Routes, Route } from "react-router";
+import Home from "./screens/Home";
+import Footer from "./components/Footer";
+import Nav from "./components/Nav";
+import ProductDetail from "./screens/ProductDetail";
 
 function App() {
-
-  
   return (
     <Fragment>
-          {/* <Route path="/"/>
-          <Route path="/products/"/>
-          <Route path="/product/:productId"/> */}
-      <Products />
+        <Nav />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        {/* <Route path="/products" element={<Products />}/> */}
+        <Route path="/product/:id" element={<ProductDetail />} />
+      </Routes>
+        <Footer />
     </Fragment>
   );
 }
