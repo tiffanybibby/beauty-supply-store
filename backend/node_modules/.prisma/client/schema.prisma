@@ -22,7 +22,7 @@ model Product {
   name     String
   description   String?
   img   String?
-  price Float
+  price       Int
   countInStock Float
-  rating Float
+  rating Float?
 }
