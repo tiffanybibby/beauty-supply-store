@@ -1,0 +1,19 @@
+{
+  "name": "beauty-supply-store",
+  "version": "1.0.0",
+  "description": "Beauty Supply Store is an e-commerce application where users can purchase a list of their favorite hair/beauty products.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tiffanybibby/beauty-supply-store.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tiffanybibby/beauty-supply-store/issues"
+  },
+  "homepage": "https://github.com/tiffanybibby/beauty-supply-store#readme"
+}
