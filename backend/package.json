@@ -6,10 +6,9 @@
   "scripts": {
     "build": "rm -rf dist && tsc",
     "dev": "nodemon --watch src -e ts --exec ts-node -r dotenv/config src/index.ts",
-    "start": "node dist/index.js"
-  },
-  "prisma": {
-    "seed": "ts-node ./prisma/seed.ts"
+    "start": "node dist/index.js",
+    "seed": "ts-node ./prisma/seed.ts",
+    "prisma:generate": "prisma generate"
   },
   "repository": {
     "type": "git",
@@ -22,7 +21,7 @@
   },
   "homepage": "https://github.com/tiffanybibby/beauty-supply-store#readme",
   "dependencies": {
-    "@prisma/client": "^3.7.0",
+    "@prisma/client": "^3.8.0",
     "bcrypt": "^5.0.1",
     "cors": "^2.8.5",
     "db": "^3.3.1",

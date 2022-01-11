@@ -1,7 +1,7 @@
-version: '3.7'
+version: '3.8'
 services:
   postgres:
-    image: postgres:10.3
+    image: postgres:13
     restart: always
     container_name: beauty_supply_postgres_db
     environment:
