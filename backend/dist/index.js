@@ -17,7 +17,6 @@ const express_1 = __importDefault(require("express"));
 const cors_1 = __importDefault(require("cors"));
 const prisma = new client_1.PrismaClient();
 const app = (0, express_1.default)();
-const port = 3001;
 app.use(express_1.default.json());
 app.use((0, cors_1.default)());
 app.get("/", (_req, res) => __awaiter(void 0, void 0, void 0, function* () {
@@ -137,5 +136,6 @@ app.use((req, res, next) => {
         message: `Unsucessful query for path: ${req.path}`,
     });
 });
+const port = process.env.PORT || 3001;
 app.listen(port, () => console.log(`server is eavesdropping on port ${port}`));
 //# sourceMappingURL=index.js.map

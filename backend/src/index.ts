@@ -3,7 +3,6 @@ import express from "express";
 import cors from 'cors'
 const prisma = new PrismaClient();
 const app = express();
-const port = 3001;
 
 app.use(express.json());
 app.use(cors())
@@ -138,4 +137,5 @@ app.use((req, res, next) => {
 });
 
 
+const port = process.env.PORT || 3001;
 app.listen(port, () => console.log(`server is eavesdropping on port ${port}`));
