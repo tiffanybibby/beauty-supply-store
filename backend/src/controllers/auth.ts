@@ -1,13 +1,3 @@
-// export const authUser = async (req: Request, res: Response) => {
-//   try {
-//     return res.status(200).json({ success: true, data: req.currentUser });
-//   } catch (e) {
-//     let message;
-//     if (e instanceof Error) message = e.message;
-//     else message = String(e);
-//     res.status(400).json({ success: false, message });
-//   }
-// };
 import { PrismaClient } from "@prisma/client";
 import { Request, Response } from 'express';
 import bcrypt from 'bcrypt'
@@ -16,8 +6,8 @@ import jwt from 'jsonwebtoken'
 const prisma = new PrismaClient();
 
 
-const SALT_ROUNDS = process.env.SALT_ROUNDS || 11
-const TOKEN_KEY = process.env.TOKEN_KEY || 'areallylonggoodkey'
+const SALT_ROUNDS = process.env.SALT_ROUNDS
+const TOKEN_KEY = process.env.TOKEN_KEY
 
 // for JWT expiration
 const today = new Date()
@@ -35,7 +25,7 @@ export const signUp = async (req: Request, res: Response) => {
     if (userExists) {
       res.status(401).send('Email already in use');
     }
-    const password_digest = await bcrypt.hash(password, SALT_ROUNDS)
+    const password_digest = await bcrypt.hash(password, SALT_ROUNDS as string)
     const user = await prisma.user.create({
       data: {
         firstName,
@@ -54,7 +44,7 @@ export const signUp = async (req: Request, res: Response) => {
       exp: Math.floor(Date.now() / 1000) + (60 * 60),
     }
 
-    const token = jwt.sign(payload, TOKEN_KEY)
+    const token = jwt.sign(payload, TOKEN_KEY as string)
     res.status(201).json({ token })
   } catch (error:any) {
     console.log(error.message)
@@ -90,7 +80,7 @@ export const signIn = async (req: Request, res: Response) => {
         exp: Math.floor(Date.now() / 1000) + (60 * 60),
       }
 
-      const token = jwt.sign(payload, TOKEN_KEY)
+      const token = jwt.sign(payload, TOKEN_KEY as string)
       res.status(201).json({ token })
 
   } catch (error: any) {
@@ -105,7 +95,7 @@ export const verify = async (req: Request, res: Response) => {
     const authHeader = req.headers['authorization']
     const token = authHeader && authHeader.split(' ')[1]
     if (token == null) return res.sendStatus(401)
-    const payload = jwt.verify(token, TOKEN_KEY)
+    const payload = jwt.verify(token, TOKEN_KEY as string)
     if (payload) {
       res.json(payload)
     }
