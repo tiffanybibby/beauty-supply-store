@@ -8,8 +8,12 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 Object.defineProperty(exports, "__esModule", { value: true });
 const client_1 = require("@prisma/client");
+const bcrypt_1 = __importDefault(require("bcrypt"));
 const prisma = new client_1.PrismaClient();
 function main() {
     return __awaiter(this, void 0, void 0, function* () {
@@ -20,6 +24,7 @@ function main() {
                 email: "tiffany.b@email.com",
                 firstName: "Tiffany",
                 lastName: "Bibby",
+                password_digest: yield bcrypt_1.default.hash("!a$ecureP@ssw0Rd55!", 11),
             },
         });
         console.log("New user sucessfully created: ", newUser);

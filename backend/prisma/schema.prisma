@@ -15,6 +15,7 @@ model User {
   email String  @unique
   firstName  String?
   lastName  String?
+  password_digest String
 }
 
 model Product {
