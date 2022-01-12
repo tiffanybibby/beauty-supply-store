@@ -24,29 +24,31 @@ export const signUp = async (req: Request, res: Response) => {
     
     if (userExists) {
       res.status(401).send('Email already in use');
-    }
-    const password_digest = await bcrypt.hash(password, SALT_ROUNDS as string)
-    const user = await prisma.user.create({
-      data: {
-        firstName,
-        lastName, 
-        email,
-        password_digest,
-      },
-    });
+    } else {
 
-    const payload = {
-      id: user.id,
-      firstName: user.firstName,
-      lastName: user.lastName, 
-      email: user.email,
-      // exp: parseInt(exp.getTime() / 1000),
-      exp: Math.floor(Date.now() / 1000) + (60 * 60),
-    }
+      const password_digest = await bcrypt.hash(password, SALT_ROUNDS as string)
+      const user = await prisma.user.create({
+        data: {
+          firstName,
+          lastName,
+          email,
+          password_digest,
+        },
+      });
 
-    const token = jwt.sign(payload, TOKEN_KEY as string)
-    res.status(201).json({ token })
-  } catch (error:any) {
+      const payload = {
+        id: user.id,
+        firstName: user.firstName,
+        lastName: user.lastName,
+        email: user.email,
+        password_digest: user.password_digest,
+        // exp: parseInt(exp.getTime() / 1000),
+        exp: Math.floor(Date.now() / 1000) + (60 * 60),
+      }
+
+      const token = jwt.sign(payload, TOKEN_KEY as string)
+      res.status(201).json({ token })
+    }} catch (error:any) {
     console.log(error.message)
     res.status(400).json({ error: error.message })
   }
