@@ -7,7 +7,7 @@ I had a blast creating this project with such special meaning to me. Learning Ty
 
 
 ## Tech Stack
-The backend utilizes a PostgreSQL REST API, Docker, Prisma, NodeJs and Typescript - deployed to Heroku. While the frontend utilizes React, Typescript, and MaterialUI. Bcrypt & JWT also have cameos. Future releases will include inegration of the Stripe API (currently in code but debugging) backend for seamless purchases.
+The backend utilizes a PostgreSQL REST API, Docker, Prisma, NodeJs and Typescript - deployed to Heroku. While the frontend utilizes React, Typescript, and MaterialUI. Bcrypt & JWT also have cameos. Future releases will include full integration of the Stripe API (currently in code but debugging) for seamless purchases.
 
 
 ## Design Choices
@@ -44,7 +44,8 @@ Step 4. Run the command $ npx prisma migrate dev --name "init" to create the pri
 
 Step 5. Run the command **npm start** on the frontend
 
-## Sample Payload
+## Sample Payload 
+###### (thanks, Postman!)
 
 ![Data Photo](https://github.com/tiffanybibby/beauty-supply-store/blob/main/frontend/src/assets/data.png?raw=true)
 
