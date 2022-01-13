@@ -5,7 +5,7 @@ require("dotenv").config();
 import cors from "cors";
 import logger from "morgan";
 import Stripe from "stripe";
-const stripe = new Stripe('process.env.REACT_APP_STRIPE_SECRET_KEY', {
+const stripe = new Stripe(`${process.env.REACT_APP_STRIPE_SECRET_KEY}`, {
   apiVersion: "2020-08-27",
 });
 

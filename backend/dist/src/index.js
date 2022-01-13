@@ -19,7 +19,7 @@ require("dotenv").config();
 const cors_1 = __importDefault(require("cors"));
 const morgan_1 = __importDefault(require("morgan"));
 const stripe_1 = __importDefault(require("stripe"));
-const stripe = new stripe_1.default(process.env.REACT_APP_STRIPE_SECRET_KEY, {
+const stripe = new stripe_1.default('process.env.REACT_APP_STRIPE_SECRET_KEY', {
     apiVersion: "2020-08-27",
 });
 // const prisma = new PrismaClient();
