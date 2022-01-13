@@ -1,4 +1,4 @@
-import { AppBar, Box, Toolbar, IconButton } from "@mui/material";
+import { AppBar, Box, Toolbar, IconButton, Typography } from "@mui/material";
 import { Link } from "react-router-dom";
 import { ReactComponent as BeautySupplyLogo } from "../assets/beauty_supply_logo2.svg";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
@@ -13,8 +13,11 @@ const Nav = () => {
               <BeautySupplyLogo style={{ width: "200px", height: "auto" }} />
             </Link>
           </Box>
-          <Link to="/cart">
-            <IconButton
+          <Typography>
+            Login
+          </Typography>
+          {/* <Link to="/cart"> */}
+            {/* <IconButton
               size="large"
               edge="start"
               color="inherit"
@@ -22,8 +25,8 @@ const Nav = () => {
               sx={{ mr: 2 }}
             >
               <ShoppingCartIcon />
-            </IconButton>
-          </Link>
+            </IconButton> */}
+          {/* </Link> */}
         </Toolbar>
       </AppBar>
     </Box>

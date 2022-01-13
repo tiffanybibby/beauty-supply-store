@@ -1,9 +1,10 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import { IProduct } from "./Home";
 import ProductCard from "../components/ProductCard";
+import api from "../services/apiConfig";
+import { getProduct } from '../services/products'
 
-const productDefault: IProduct = {
+const productDefault: ProductProps = {
   id: 0,
   name: "",
   description: "",
@@ -13,25 +14,24 @@ const productDefault: IProduct = {
 };
 
 export default function ProductDetail() {
-  const [product, setProduct] = useState<IProduct>(productDefault);
+  const [product, setProduct] = useState<ProductProps>(productDefault);
   const [isLoaded, setLoaded] = useState(false);
   const { id } = useParams();
 
+  console.log(id);
+
   useEffect(() => {
-    const getProduct = async () => {
-      try {
-        const response = await fetch(`http://localhost:3001/product/${id}`);
-        const jsonData = await response.json();
-
-        setProduct(jsonData.payload);
+    if (id) {
+      const fetchProduct = async () => {
+        const response = await getProduct(id);
+        setProduct(response);
+        console.log(response)
         setLoaded(true);
-      } catch (err: any) {
-        console.error(err.message);
       }
-    };
-
-    getProduct();
-  }, [id]);
+      fetchProduct();
+    }
+  }, [id]
+  );
 
   console.log(product);
 

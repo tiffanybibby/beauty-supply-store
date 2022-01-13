@@ -10,15 +10,15 @@ import {
 } from "@mui/material";
 import { styled } from "@mui/material/styles";
 import { FC } from "react";
-import { IProduct } from "../screens/Home";
+import { Link } from "react-router-dom";
 
-const ProductCards: FC<IProduct> = ({
-  name,
-  img,
-  description,
-  price,
-  rating,
-}) => {
+
+
+const ProductCards: React.FC<ProductCardProp> = ({ id, name, img, price, rating, quantity, handleAddToCart, product }) => {
+  
+  const calculateTotal = (products: IProduct[]) =>
+    products.reduce((ack: number, product) => ack + product.quantity * product.price, 0);
+  
   function formatPrice(price: number) {
     return "$" + (price / 100).toFixed(2) + " USD";
   }
@@ -40,6 +40,10 @@ const ProductCards: FC<IProduct> = ({
       }}
     >
       <CardActionArea>
+      <Link
+              to={`/product/${id}`}
+              style={{ color: "inherit", textDecoration: "inherit" }}
+            >
         <CardMedia sx={{ width: "100%", height: 230 }}>
           <Img alt={name} src={img} />
         </CardMedia>
@@ -66,9 +70,10 @@ const ProductCards: FC<IProduct> = ({
           >
             {formatPrice(price)}
           </Typography>
-        </CardContent>
+          </CardContent>
+          </Link>
         <CardActions sx={{ justifyContent: "flex-end" }}>
-          <Button type="submit">Add to Cart</Button>
+        <Button onClick={() => handleAddToCart(product)}>Add to Cart</Button>
         </CardActions>
       </CardActionArea>
     </Card>

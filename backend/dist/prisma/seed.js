@@ -59,7 +59,7 @@ function main() {
                 },
                 {
                     name: "Neutrogena Makeup Remover Cleansing Face Wipes, 25 ct., 2 Pack",
-                    description: "For all hair types. Moisturizes hair and scalp, tames frizz. No flake, no tack, anti-itch. UV protection. Alcohol free. Genuine. Ecostyle olive oil styling gel is made with 100% pure olive oil. Olive oil helps your scalp naturally regulate its own moisturizing system. Olive oil helps attract moisture to the scalp and holds it in. Like all our styling gels, it is weightless and will leave your hair with a healthy shine and superior hold. www.ecocoinc.com. Dispose of properly. Made in USA Chicago, IL.",
+                    description: "Remove makeup in one easy step with Neutrogena Makeup Remover Face Wipes. These soft and gentle pre-moistened facial cleansing towelettes effectively dissolve all traces of dirt, oil and makeup--even waterproof mascara-- for clean, fresh looking skin every day. Our makeup remover features an effective micellar-infused, triple emollient formula that leaves skin feeling refreshed, nourished, conditioned and thoroughly clean with no heavy residue. These facial towelettes also remove sweat, sunscreen, and pollution from skin with no need to rinse after use. These daily face wipes are formulated to be gentle on the sensitive eye area. The makeup removing wet wipes are formulated without phthalates, parabens, sulfates, alcohols, soaps, or dyes and are ophthalmologist-, dermatologist-, and allergy-tested. Designed with the earth in mind, the compostable wipes are made with 100% plant-based fibers and biodegrade in 35 days in home compost.",
                     img: "https://i5.walmartimages.com/asr/c2053939-9d00-4eb5-8517-b7964ea804b1.0f29f492b15e7ce987a893f9d37fa9f2.jpeg",
                     price: 893,
                     countInStock: 49,
@@ -75,7 +75,7 @@ function main() {
                 },
                 {
                     name: "Cutex Strength Shield Nail Polish Remover, for Healthy Nails, with Vitamins E, B5, and Hydrolyzed Silk, 6.76 fl oz",
-                    description: "For all hair types. Moisturizes hair and scalp, tames frizz. No flake, no tack, anti-itch. UV protection. Alcohol free. Genuine. Ecostyle olive oil styling gel is made with 100% pure olive oil. Olive oil helps your scalp naturally regulate its own moisturizing system. Olive oil helps attract moisture to the scalp and holds it in. Like all our styling gels, it is weightless and will leave your hair with a healthy shine and superior hold. www.ecocoinc.com. Dispose of properly. Made in USA Chicago, IL.",
+                    description: "Nail Polish Remover, Strength-Shield, Bottle 6.7 OZ, with hydrolyzed silk and vitamins E. Since 1911. Cutex Strength-Shield helps maintain healthy-looking nails. The formula quickly and completely removes all traces of polish. Questions? Visit cutex.com. Made in Mexico. Good for 24 months once opened. Extremely flammable. Keep away from heat or flame. Eye irritant. Do not ingest. Keep away from children. 6.7 fl oz (200 ml) New York, NY 10004 800-455-6665 2016 Cutex, Inc.",
                     img: "https://i5.walmartimages.com/asr/5d579290-5ee4-4064-af62-2897343d9744_1.c26c32ca4e398625cdefe74ac26ca6a9.jpeg",
                     price: 197,
                     countInStock: 91,

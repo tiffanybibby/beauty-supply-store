@@ -22,6 +22,7 @@
   "homepage": "https://github.com/tiffanybibby/beauty-supply-store#readme",
   "dependencies": {
     "@prisma/client": "^3.8.0",
+    "@stripe/stripe-js": "^1.22.0",
     "bcrypt": "^5.0.1",
     "cors": "^2.8.5",
     "db": "^3.3.1",
@@ -31,7 +32,8 @@
     "morgan": "^1.10.0",
     "nodemon": "^2.0.15",
     "pg": "^8.7.1",
-    "postgres-migrations": "^5.3.0"
+    "postgres-migrations": "^5.3.0",
+    "stripe": "^8.196.0"
   },
   "devDependencies": {
     "@types/bcrypt": "^5.0.0",

@@ -14,7 +14,7 @@ import IconButton, { IconButtonProps } from "@mui/material/IconButton";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import AddIcon from "@mui/icons-material/Add";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-import { IProduct } from "../screens/Home";
+
 
 interface ExpandMoreProps extends IconButtonProps {
   expand: boolean;
@@ -31,13 +31,8 @@ const ExpandMore = styled((props: ExpandMoreProps) => {
   }),
 }));
 
-const ProductCards: FC<IProduct> = ({
-  name,
-  img,
-  description,
-  price,
-  rating,
-}) => {
+const ProductCard: React.FC<ProductProps> = ({id, name, img, description, price, rating}) => {
+  
   function formatPrice(price: number) {
     return "$" + (price / 100).toFixed(2) + " USD";
   }
@@ -46,7 +41,7 @@ const ProductCards: FC<IProduct> = ({
     margin: "auto",
     display: "block",
     maxWidth: "50%",
-    maxHeight: "80%",
+    maxHeight: "40%",
   });
 
   // export default function HalfRating() {
@@ -96,9 +91,9 @@ const ProductCards: FC<IProduct> = ({
           <Typography variant="body1" fontWeight="bold" fontSize="medium">
             {formatPrice(price)}
           </Typography>
-            <IconButton aria-label="add to cart">
+            {/* <IconButton onClick={() => handleAddToCart(product)} aria-label="add to cart">
               <AddIcon fontSize="medium" />
-            </IconButton>
+            </IconButton> */}
           </CardActions>
           <Typography paragraph>{description}</Typography>
           <ExpandMore
@@ -122,4 +117,4 @@ const ProductCards: FC<IProduct> = ({
     </Card>
   );
 };
-export default ProductCards;
+export default ProductCard;
