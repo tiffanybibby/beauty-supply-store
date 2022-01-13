@@ -15,7 +15,7 @@ const Footer = () => {
         &copy; {new Date().getFullYear()}{" "}
         <Link
           style={{ color: "inherit" }}
-          href="https://github.com/tiffanydiandra/beauty-supply-store"
+          href="https://github.com/tiffanybibby/beauty-supply-store"
         >
           BSS.
         </Link>{" "}
