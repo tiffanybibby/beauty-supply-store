@@ -44,7 +44,7 @@ Step 4. Run the command $ npx prisma migrate dev --name "init" to create the pri
 
 Step 5. Run the command **npm start** on the frontend
 
-##Sample Payload
+## Sample Payload
 
 ![Data Photo](https://github.com/tiffanybibby/beauty-supply-store/blob/main/frontend/src/assets/data.png?raw=true)
 
