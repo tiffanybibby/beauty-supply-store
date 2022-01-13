@@ -14,7 +14,7 @@ const Cart: React.FC<CartProps> = ({
       0
     );
 
-  const stripePromise = loadStripe(process.env.REACT_APP_STRIPE_PUBLIC_KEY);
+  const stripePromise = loadStripe('process.env.REACT_APP_STRIPE_PUBLIC_KEY');
 
   const handleClick = async (event: any) => {
     const { sessionId } = await fetch(
