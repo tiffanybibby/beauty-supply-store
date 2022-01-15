@@ -8,6 +8,7 @@ import Stripe from "stripe";
 const stripe = new Stripe(`${process.env.REACT_APP_STRIPE_SECRET_KEY}`, {
   apiVersion: "2020-08-27",
 });
+const port = process.env.PORT || 3001;
 
 // const prisma = new PrismaClient();
 const app = express();
@@ -16,7 +17,7 @@ app.use(express.json());
 app.use(cors());
 app.use(logger("dev"));
 app.use("/api", routes);
-// app.use(express.static('public'));
+
 
 app.post("/create-checkout-session", async (req: Request, res: Response) => {
   try {
@@ -39,7 +40,6 @@ app.post("/create-checkout-session", async (req: Request, res: Response) => {
   }
 });
 
-const port = process.env.PORT || 3001;
 app.listen(port, () =>
   process.env.NODE_ENV === "production"
     ? console.log(`server is eavesdropping in production on port ${port}`)
