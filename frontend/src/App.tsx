@@ -13,15 +13,15 @@ function App() {
   const [cartProducts, setCartProducts] = useState([] as IProduct[]);
   const [cartOpen, setCartOpen] = useState(false);
 
-  let localCart = JSON.parse(localStorage["cartProducts"]);
+  // let localCart = JSON.parse(localStorage["cartProducts"]);
 
-  useEffect(() => {
-    localStorage.setItem("cartProducts", JSON.stringify(cartProducts));
-  }, [cartProducts]);
+  // useEffect(() => {
+  //   localStorage.setItem("cartProducts", JSON.stringify(cartProducts));
+  // }, [cartProducts]);
 
-  useEffect(() => {
-    if (localCart) setCartProducts(localCart);
-  }, []);
+  // useEffect(() => {
+  //   if (localCart) setCartProducts(localCart);
+  // }, []);
 
 
   const getTotalProducts = (products: IProduct[]) =>
