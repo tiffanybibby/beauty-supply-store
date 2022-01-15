@@ -1,12 +1,8 @@
-import { Fragment, useState, useEffect } from "react";
-import { useQuery } from 'react-query';
-import axios from 'axios'
-import { Link } from "react-router-dom";
+import { useState, useEffect } from "react";
 import ProductCards from "../components/ProductCards";
 import { Grid, Drawer, Button, Badge, Box } from "@mui/material";
-import { getProducts } from '../services/products'
+// import { getProducts } from '../services/products'
 import AddShoppingCartIcon from '@material-ui/icons/AddShoppingCart';
-// import LinearProgress from '@material-ui/core/LinearProgress';
 import Cart from '../components/Cart';
 import api from '../services/apiConfig'
 

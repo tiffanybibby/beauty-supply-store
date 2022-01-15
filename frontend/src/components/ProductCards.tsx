@@ -9,15 +9,10 @@ import {
   Rating,
 } from "@mui/material";
 import { styled } from "@mui/material/styles";
-import { FC } from "react";
 import { Link } from "react-router-dom";
-
-
 
 const ProductCards: React.FC<ProductCardProp> = ({ id, name, img, price, rating, quantity, handleAddToCart, product }) => {
   
-  const calculateTotal = (products: IProduct[]) =>
-    products.reduce((ack: number, product) => ack + product.quantity * product.price, 0);
   
   function formatPrice(price: number) {
     return "$" + (price / 100).toFixed(2) + " USD";

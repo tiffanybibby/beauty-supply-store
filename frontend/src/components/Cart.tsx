@@ -2,7 +2,6 @@ import CartProduct, { formatPrice } from "./CartProduct";
 import { Grid, Typography, Card, Button } from "@mui/material";
 import { loadStripe } from "@stripe/stripe-js";
 
-
 const Cart: React.FC<CartProps> = ({
   cartProducts,
   addToCart,
@@ -14,7 +13,9 @@ const Cart: React.FC<CartProps> = ({
       0
     );
 
-  const stripePromise = loadStripe('pk_test_51GrR7VK3BlH77gBm0wTZ12X0WVVgQz3HEIAITVwpTqMKTYee1Z4wR7DNXap8esZhK7brqHC3mM1ePx6TIqHxX95S007KBSLznf');
+  const stripePromise = loadStripe(
+    "pk_test_51GrR7VK3BlH77gBm0wTZ12X0WVVgQz3HEIAITVwpTqMKTYee1Z4wR7DNXap8esZhK7brqHC3mM1ePx6TIqHxX95S007KBSLznf"
+  );
 
   const handleClick = async (event: any) => {
     const { sessionId } = await fetch(

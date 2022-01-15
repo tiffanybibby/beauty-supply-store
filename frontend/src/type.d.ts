@@ -17,15 +17,6 @@ type ProductProps = {
   rating: number;
 }
 
-// interface ICart {
-//   id: number;
-//   name: string;
-//   description: string;
-//   img: string;
-//   price: number;
-//   rating: number;
-//   quantity: number;
-// }
 
 type ProductCardProp = {
   id: number;
@@ -35,22 +26,10 @@ type ProductCardProp = {
   price: number;
   rating: number;
   quantity: number;
-  // addToCart: (clickedProduct: IProduct) => void;
-  // removeFromCart: (id: number) => void;
   product: IProduct;
   handleAddToCart: (clickedproduct: IProduct) => void;
 }
 
-
-// type IProduct = {
-//   id: number;
-//   name: string;
-//   description: string;
-//   img: string;
-//   price: number;
-//   rating: number;
-//   quantity: number;
-// };
 
 type CartProps = {
   cartProducts: IProduct[];
@@ -61,6 +40,12 @@ type CartProps = {
 type AddToCartProps = {
   product: IProduct;
   handleAddToCart: (clickedProduct: IProduct) => void;
+};
+
+type Props = {
+  product: IProduct;
+  addToCart: (clickedProduct: IProduct) => void;
+  removeFromCart: (id: number) => void;
 };
 
 interface IUser {

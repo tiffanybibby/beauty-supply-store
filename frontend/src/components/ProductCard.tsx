@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import React from "react";
 import { styled } from "@mui/material/styles";
 import {
   Box,
@@ -12,7 +12,6 @@ import {
 } from "@mui/material";
 import IconButton, { IconButtonProps } from "@mui/material/IconButton";
 import FavoriteIcon from "@mui/icons-material/Favorite";
-import AddIcon from "@mui/icons-material/Add";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 
 
@@ -44,15 +43,6 @@ const ProductCard: React.FC<ProductProps> = ({id, name, img, description, price,
     maxHeight: "40%",
   });
 
-  // export default function HalfRating() {
-  //   return (
-  //     <Stack spacing={1}>
-  //       <Rating name="half-rating" defaultValue={2.5} precision={0.5} />
-  //       <Rating name="half-rating-read" defaultValue={2.5} precision={0.5} readOnly />
-  //     </Stack>
-  //   );
-  // }
-
   const [expanded, setExpanded] = React.useState(false);
 
   const handleExpandClick = () => {
@@ -78,22 +68,15 @@ const ProductCard: React.FC<ProductProps> = ({id, name, img, description, price,
             <IconButton aria-label="add to favorites">
               <FavoriteIcon />
             </IconButton>
-
-            {/* <Stack spacing={1}> */}
-            {/* <Rating name="half-rating" defaultValue={rating} precision={0.5} /> */}
             <Rating
               name="half-rating-read"
               defaultValue={rating}
               precision={0.5}
               readOnly
             />
-            {/* </Stack> */}
           <Typography variant="body1" fontWeight="bold" fontSize="medium">
             {formatPrice(price)}
           </Typography>
-            {/* <IconButton onClick={() => handleAddToCart(product)} aria-label="add to cart">
-              <AddIcon fontSize="medium" />
-            </IconButton> */}
           </CardActions>
           <Typography paragraph>{description}</Typography>
           <ExpandMore

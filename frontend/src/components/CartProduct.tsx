@@ -1,18 +1,9 @@
-import Button from '@material-ui/core/Button';
 import { styled } from "@mui/material/styles";
-import { Box, Typography, Card } from "@mui/material";
-import IconButton, { IconButtonProps } from "@mui/material/IconButton";
+import { Box, Typography } from "@mui/material";
+import IconButton from "@mui/material/IconButton";
 import AddCircleIcon from '@mui/icons-material/AddCircle';
 import RemoveCircleIcon from '@mui/icons-material/RemoveCircle';
 
-
-
-
-type Props = {
-  product: IProduct;
-  addToCart: (clickedProduct: IProduct) => void;
-  removeFromCart: (id: number) => void;
-};
 
 export function formatPrice(price: number) {
   return "$" + (price / 100).toFixed(2) + " USD";
