@@ -5,6 +5,7 @@ The motivation behind creating this app is the hope that it can be used by cosme
 
 I had a blast creating this project with such special meaning to me. Learning Typescript and Prisma has been a welcomed challenge. I humbly thank you for taking the time to review my work and I am looking forward to discussing in greater detail.
 
+### Deployed Link: https://beauty-supply-store.netlify.app/
 
 ## Tech Stack
 The backend utilizes a PostgreSQL REST API, Docker, Prisma, NodeJs and Typescript - deployed to Heroku. While the frontend utilizes React, Typescript, and MaterialUI. Bcrypt & JWT also have cameos. Future releases will include full integration of the Stripe API (currently in code but debugging) for seamless purchases.
