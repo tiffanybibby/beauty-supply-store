@@ -23,7 +23,6 @@ function App() {
     if (localCart) setCartProducts(localCart);
   }, []);
 
-  console.log(cartProducts);
 
   const getTotalProducts = (products: IProduct[]) =>
     products.reduce((ack: number, product) => ack + product.quantity, 0);
@@ -59,7 +58,6 @@ function App() {
     );
   };
 
-  console.log(cartProducts);
 
   return (
     <Fragment>

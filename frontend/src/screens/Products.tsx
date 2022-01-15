@@ -16,7 +16,6 @@ const Products: React.FC<CartProps> = ({
   const getProducts = async () => {
     try {
       const response = await api.get("/products");
-      console.log(response.data.payload);
       setProducts(response.data.payload);
     } catch (err: any) {
       console.error(err.message);

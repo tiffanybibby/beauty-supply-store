@@ -19,6 +19,12 @@ const Nav: React.FC<Nav> = ({
     <Box sx={{ flexGrow: 1, mb: 8 }} aria-label="nav">
       <AppBar position="static" sx={{ backgroundColor: "rgb(12	88	212	)" }}>
         <Toolbar>
+          <Box sx={{ flexGrow: 1, ml: 5 }} aria-label="logo">
+            <Link to="/">
+              <BeautySupplyLogo style={{ width: "200px", height: "auto" }} />
+            </Link>
+          </Box>
+          <Typography>Login</Typography>
           <Box sx={{ display: "flex", justifyContent: "end" }}>
             <Button onClick={() => setCartOpen(true)}>
               <Badge
@@ -29,12 +35,6 @@ const Nav: React.FC<Nav> = ({
               </Badge>
             </Button>
           </Box>
-          <Box sx={{ flexGrow: 1, ml: 5 }} aria-label="logo">
-            <Link to="/">
-              <BeautySupplyLogo style={{ width: "200px", height: "auto" }} />
-            </Link>
-          </Box>
-          <Typography>Login</Typography>
         </Toolbar>
       </AppBar>
     </Box>
