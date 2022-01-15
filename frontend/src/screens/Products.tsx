@@ -1,8 +1,7 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, Fragment } from "react";
 import ProductCards from "../components/ProductCards";
 import { Grid } from "@mui/material";
 // import { getProducts } from '../services/products'
-import Cart from "../components/Cart";
 import api from "../services/apiConfig";
 
 const Products: React.FC<CartProps> = ({
@@ -38,6 +37,7 @@ const Products: React.FC<CartProps> = ({
       >
         {products.map((product) => {
           return (
+            <Fragment key={product.id}>
             <ProductCards
               id={product.id}
               name={product.name}
@@ -48,7 +48,8 @@ const Products: React.FC<CartProps> = ({
               quantity={product.quantity}
               product={product}
               handleAddToCart={handleAddToCart}
-            />
+              />
+              </Fragment>
           );
         })}
       </Grid>
