@@ -21,7 +21,7 @@ function App() {
 
   useEffect(() => {
     if (localCart) setCartProducts(localCart);
-  }, []);
+  }, [localCart]);
 
 
   const getTotalProducts = (products: IProduct[]) =>
