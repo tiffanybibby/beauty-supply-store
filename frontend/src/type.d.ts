@@ -35,6 +35,8 @@ type CartProps = {
   cartProducts: IProduct[];
   addToCart: (clickedProduct: IProduct) => void;
   removeFromCart: (id: number) => void;
+  getTotalProducts: (cartProducts) => void;
+  handleAddToCart: (clickedProduct: IProduct) => void;
 };
 
 type AddToCartProps = {
@@ -54,4 +56,12 @@ interface IUser {
   firstName: string
   lastName: string
   password: string
+}
+
+
+interface Nav {
+  badgeContent?: ((current: number, total: number) => React.ReactNode) | undefined;
+  cartProducts: IProduct[]
+  getTotalProducts: (cartProducts) => number;
+  setCartOpen: (value: React.SetStateAction<boolean>) => void
 }

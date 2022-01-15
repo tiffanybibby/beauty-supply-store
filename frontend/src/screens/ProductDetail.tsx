@@ -40,7 +40,7 @@ export default function ProductDetail() {
   }
 
   return (
-    <h1>
+    <>
       <ProductCard
         id={product.id}
         name={product.name}
@@ -49,6 +49,6 @@ export default function ProductDetail() {
         price={product.price}
         rating={product.rating}
       />
-    </h1>
+    </>
   );
 }
