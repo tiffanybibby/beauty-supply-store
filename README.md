@@ -1,5 +1,5 @@
 # Beauty Supply Store
-Beauty Supply Store is an e-commerce application where users can purchase a list of their favorite hair/beauty products.
+*Beauty Supply Store* is an e-commerce application where users can purchase a list of their favorite hair/beauty products.
 
 The motivation behind creating this app is the hope that it can be used by cosmetologists to sell their own products without having to pay extensive fees with big e-commerce apps. The goal is to empower entrepreneurs.
 
@@ -8,7 +8,7 @@ I had a blast creating this project with such special meaning to me. Learning Ty
 ### Deployed Link: https://beauty-supply-store.netlify.app/
 
 ## Tech Stack
-The backend utilizes a PostgreSQL REST API, Docker, Prisma, NodeJs and Typescript - deployed to Heroku. While the frontend utilizes React, Typescript, and MaterialUI. Bcrypt & JWT also have cameos. Future releases will include full integration of the Stripe API (currently in code but debugging) for seamless purchases.
+The backend utilizes a PostgreSQL REST API, Docker, Prisma, NodeJs and Typescript - deployed to Heroku. While the frontend utilizes React, Typescript, and MaterialUI - deployed to Netlify. Bcrypt & JWT also have cameos. Future releases will include full integration of the Stripe API (currently in code but debugging) for seamless purchases.
 
 
 ## Design Choices
